@@ -1,0 +1,2 @@
+"sampleId", "disease_icd10", "disease_snomed-ct", "disease_mesh", "id_icd10", "id_snomed-ct", "primarySite", "morphology", "stage_tnm", "stage_curated", "grade"
+"abc", "xyz", "pqr", "def", "ABC123", "DEF345", "some site", "some morphology", "some stage", "some stage", "some grade"
