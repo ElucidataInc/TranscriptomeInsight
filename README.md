@@ -3,8 +3,8 @@ Data Model Definition for RNASeq Data
 
 ## Contents
 
-- [Specifications](specification.md): Detailed specifications for defining entities in YAML format.
-- [Versioning Guidelines](guidelines.md): Guidelines for versioning entities using Semantic Versioning.
+- [Specifications](specifications.md): Detailed specifications for defining entities in YAML format.
+- [Versioning Guidelines](Semantic-Versioning-guidelines.md): Guidelines for versioning entities using Semantic Versioning.
 
 ## Getting Started
 
