@@ -17,4 +17,4 @@ Sample:
             description: Type of tissue represented by the sample, such as epithelial or connective tissue.
             type: string
     type: object
-    version: 0.0.1
+    version: 1.0.0

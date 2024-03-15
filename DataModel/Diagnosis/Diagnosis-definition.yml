@@ -15,7 +15,6 @@ Diagnosis:
                     description: The disease in SNOMED-CT format.
                     format: SNOMED-CT
                     type: string
-                    version: 2024-03-01
                 mesh:
                     description: The disease in MeSH format.
                     format: MeSH
@@ -34,6 +33,7 @@ Diagnosis:
                     format: SNOMED-CT
                     pattern: ^(?!0)\d{15}(00|10)$
                     type: string
+                    version: 2024-03-01
         primarySite:
             description: The primary site associated with the diagnosis. Example, "Lung".
             type: string
@@ -58,5 +58,5 @@ Diagnosis:
             description: The histological grade associated with the diagnosis.
             type: string
     type: object
-    version: 0.0.1
+    version: 1.0.0
                 

@@ -5,6 +5,7 @@ ExperimentDesign:
   properties:
     organism:
       description: The organism under study, providing information about the species or biological system.
+      format: NCBITaxon
       type: string
     totalNumberSamples:
       description: |
@@ -20,4 +21,4 @@ ExperimentDesign:
         The objective or goal of the study, outlining the specific aim or purpose of conducting the experiment.
       type: string
   type: object
-  version: 0.0.1
+  version: 1.0.0

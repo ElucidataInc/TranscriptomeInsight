@@ -8,4 +8,4 @@ Treatment:
             description: Name of the treatment arm or group.
             type: string
     type: object
-    version: 0.0.1 
+    version: 1.0.0 
