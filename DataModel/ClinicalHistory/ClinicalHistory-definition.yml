@@ -1,0 +1,17 @@
+ClinicalHistory:
+  description: A dataset containing clinical history information, including sample ID, age at diagnosis, and comorbidity details.
+  properties:
+    sampleId:
+      description: Identifier for the sample associated with clinical history data.
+      type: string
+    ageAtDiagnosis:
+      description: Age at the time of diagnosis.
+      format: years
+      pattern: '^\d+$'
+      type: string
+    comorbidity:
+      description: Details of comorbid conditions.
+      type: array
+  type: object
+  version: 1.0.0
+

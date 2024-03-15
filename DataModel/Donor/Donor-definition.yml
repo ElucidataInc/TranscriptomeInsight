@@ -1,0 +1,29 @@
+Donor:
+  description: A dataset containing information about a donor, including BMI, height, weight, birth year, gender, ethnicity, and race.
+  properties:
+    bmi:
+      description: Body mass index (BMI) of the donor.
+      type: float
+    height:
+      description: Height of the donor.
+      format: centimeters (cm)
+      type: float
+    weight:
+      description: Weight of the donor.
+      format: kilograms (kg)
+      type: float
+    birthYear:
+      description: Birth year of the donor.
+      type: integer
+      minimum: 1900  
+    gender:
+      description: Gender of the donor (e.g., male, female, other).
+      type: string
+    ethnicity:
+      description: Ethnicity of the donor.
+      type: string
+    race:
+      description: Race of the donor.
+      type: string
+  type: object
+  version: 0.0.1

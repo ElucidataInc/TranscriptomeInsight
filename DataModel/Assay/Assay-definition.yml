@@ -1,0 +1,26 @@
+Assay:
+    description: A dataset containing assay information, including count data for gene expression.
+    properties:
+        countData:
+            description: Count data for gene expression.
+            properties:
+                geneSymbol:
+                    description: Symbol representing the gene.
+                    format: Ensembl
+                    type: string
+                items:
+                    description: Array containing expression values for different samples.
+                    sampleId:
+                        description: Identifier for the sample.
+                        type: string
+                    expressionValue:
+                        anyOf:
+                            - description: Raw count expression value for the gene in the sample.
+                              type: integer
+                              format: raw counts
+                            - description: Normalized count expression value for the gene in the sample.
+                              type: float
+                              format: normalised counts
+                    type: array
+    type: object
+    version: 0.0.1

@@ -1,0 +1,60 @@
+Diagnosis:
+    description: A dataset containing information about a diagnosis, including sample ID, disease details, diagnosis IDs, primary site, morphology, stage, and grade.
+    properties:
+        sampleId: 
+            description: The identifier for the sample associated with the diagnosis.
+            type: string
+        disease:
+            description: The name of the disease identified during diagnosis.
+            properties:
+                icd10:
+                    description: The disease in ICD-10 format.
+                    format: ICD-10
+                    type: string
+                snomed-ct:
+                    description: The disease in SNOMED-CT format.
+                    format: SNOMED-CT
+                    type: string
+                    version: 2024-03-01
+                mesh:
+                    description: The disease in MeSH format.
+                    format: MeSH
+                    type: string
+        id:
+            description: The ontological identifier of the disease term.
+            properties:
+                icd10:
+                    description: The diagnosis ID in ICD-10 format.
+                    format: ICD-10
+                    pattern: ^[A-U]\d{2}-[A-U]\d{2}$
+                    type: string
+                    version: ICD-10 Version:2019
+                snomed-ct:
+                    description: The diagnosis ID in SNOMED-CT format.
+                    format: SNOMED-CT
+                    pattern: ^(?!0)\d{15}(00|10)$
+                    type: string
+        primarySite:
+            description: The primary site associated with the diagnosis. Example, "Lung".
+            type: string
+        morphology:
+            description: The morphology associated with the diagnosis. Example, "Squamous cell carcinoma".
+            type: string
+        stage:
+            description: The categorisation of tumor progression in a patient.
+            properties:
+                tnm:
+                    description: The stage in AJCC Staging System format (Edition 7). Example, "T1N0M0".
+                    format: AJCC Staging System
+                    pattern: ^(?=[ ]*(?:(?&T)|(?&N)|(?&M)))(?:[ ]*(?&T))?(?:[ ]*(?&N))?(?:[ ]*(?&M))?[ ]*(?:(?>(?!(?:(?&T)|(?&N)|(?&M)|\s)).)|$).*$(?(DEFINE)(?<T>T)(?<N>N)(?<M>M))
+                    type: string
+                    version: Edition 7
+                curated:
+                    description: The stage in another format that is based on specific curation standards. Example, "Stage III".
+                    type: string
+        grade:
+            description: The histological grade associated with the diagnosis.
+            type: string
+    type: object
+    version: 0.0.1
+                

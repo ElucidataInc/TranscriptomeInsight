@@ -1,0 +1,23 @@
+ExperimentDesign:
+  description: |
+    Describes the experimental design of a study, including details such as the organism studied,
+    the total number of samples, comparison groups, and the study's objective.
+  properties:
+    organism:
+      description: The organism under study, providing information about the species or biological system.
+      type: string
+    totalNumberSamples:
+      description: |
+        The total number of samples included in the experiment, representing the size of the dataset.
+      pattern: '^\d+$'
+      type: integer
+    comparisonGroup:
+      description: |
+        Describes how the samples are grouped for comparison, indicating any treatment/control groups or conditions.
+      type: string
+    objective:
+      description: |
+        The objective or goal of the study, outlining the specific aim or purpose of conducting the experiment.
+      type: string
+  type: object
+  version: 0.0.1

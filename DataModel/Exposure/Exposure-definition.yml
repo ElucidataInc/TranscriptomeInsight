@@ -1,0 +1,25 @@
+Exposure:
+  description: A dataset containing information about exposure history, including alcohol consumption and tobacco smoking details.
+  properties:
+    sampleId:
+      description: Identifier for the sample associated with exposure data.
+      type: string
+    alcoholHistory:
+      description: History of alcohol consumption.
+      type: string
+    alcoholIntensity:
+      description: Intensity of alcohol consumption.
+      type: string
+    tobaccoSmokingOnsetYear:
+      description: Year of onset for tobacco smoking.
+      pattern: '^\d{4}$'
+      type: string
+    tobaccoSmokingQuitYear:
+      description: Year of quitting tobacco smoking.
+      pattern: '^\d{4}$'
+      type: string
+    tobaccoSmokingStatus:
+      description: Current status of tobacco smoking (e.g., current smoker, former smoker, never smoker).
+      type: string
+  type: object
+  version: 1.0.0

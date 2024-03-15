@@ -1,0 +1,35 @@
+Dataset:
+  description: |
+    A dataset containing information about a scientific study. This dataset includes details such as the source name,
+    source link, PubMed ID, abstract, title, summary, and overall design of the study.
+  properties:
+    sourceName:
+      description: The name of the data source providing the study information.
+      type: string
+    sourceLink:
+      description: |
+        The URL link to the source where the study information is hosted or retrieved from. Should be in URI format.
+      format: uri
+      type: string
+    pubmedId:
+      description: |
+        The PubMed ID (PMID) associated with the study. PubMed IDs typically start with "PMID:" followed by digits.
+        Example: PMID: 12345678.
+      pattern: '^PMID:\s*\d+$'
+      type: string
+    abstract:
+      description: The abstract of the study providing a concise summary of its content and findings.
+      type: string
+    title:
+      description: The title of the study providing a brief description of its subject matter.
+      type: string
+    summary:
+      description: A summarized description of the study capturing its key points and findings.
+      type: string
+    overallDesign:
+      description: |
+        The overall design or methodology employed in the study, providing insights into its experimental setup
+        and procedures.
+      type: string
+  type: object
+  version: 0.0.1

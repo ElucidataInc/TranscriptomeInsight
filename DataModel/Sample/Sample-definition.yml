@@ -1,0 +1,20 @@
+Sample:
+    description: A dataset containing information about a biological sample.
+    properties:
+        sampleId:
+            description: The identifier for the sample.
+            type: string
+        type:
+            description: The type of sample.
+            type: string
+        preservationMethod:
+            description: Method used for preserving the sample, such as freezing or fixation.
+            type: string
+        siteOfResectionOrBiopsy:
+            description: Site of resection or biopsy where the sample was obtained from.
+            type: string
+        tissueType:
+            description: Type of tissue represented by the sample, such as epithelial or connective tissue.
+            type: string
+    type: object
+    version: 0.0.1

@@ -1,0 +1,18 @@
+Method:
+    description: The methodology behind raw RNASeq data processing.
+    properties:
+        refGeneAnnotation:
+            description: Gene Annotation format and version
+            format: Ensembl
+            type: string
+            version: Version 107
+        referenceGenome:
+            description: The reference genome used to align raw reads.
+            format: GRCh38
+            type: string
+        alignmentMethod:
+            description: The alignment algorithm used to align raw reads to reference genome.
+            format: kallisto 
+            type: string
+    type: object
+    version: 0.0.1

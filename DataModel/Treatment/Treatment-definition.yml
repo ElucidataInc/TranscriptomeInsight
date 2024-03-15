@@ -1,0 +1,11 @@
+Treatment:
+    description:
+    properties:
+        sampleId:
+            description: The identifier for the sample.
+            type: string
+        armName:
+            description: Name of the treatment arm or group.
+            type: string
+    type: object
+    version: 0.0.1 
