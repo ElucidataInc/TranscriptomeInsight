@@ -44,14 +44,16 @@ Diagnosis:
             description: The categorisation of tumor progression in a patient.
             properties:
                 tnm:
-                    description: The stage in AJCC Staging System format (Edition 7). Example, "T1N0M0".
+                    description: The TNM stage in AJCC Staging System format (Edition 7). Example, "T1N0M0".
                     format: AJCC Staging System
                     pattern: ^(?=[ ]*(?:(?&T)|(?&N)|(?&M)))(?:[ ]*(?&T))?(?:[ ]*(?&N))?(?:[ ]*(?&M))?[ ]*(?:(?>(?!(?:(?&T)|(?&N)|(?&M)|\s)).)|$).*$(?(DEFINE)(?<T>T)(?<N>N)(?<M>M))
                     type: string
                     version: Edition 7
                 curated:
-                    description: The stage in another format that is based on specific curation standards. Example, "Stage III".
+                    description: The tumor stage in AJCC Staging System format (Edition 7).
+                    format: AJCC Staging System
                     type: string
+                    version: Edition 7
         grade:
             description: The histological grade associated with the diagnosis.
             type: string
